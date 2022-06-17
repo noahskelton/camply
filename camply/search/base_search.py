@@ -197,7 +197,7 @@ class BaseCampingSearch(ABC):
         if int(polling_interval) < SearchConfig.POLLING_INTERVAL_MINIMUM:
             polling_interval = SearchConfig.POLLING_INTERVAL_MINIMUM
         polling_interval_minutes = int(round(float(polling_interval), 2))
-        return polling_interval_minutes
+        return 1
 
     def _continuous_search_retry(
             self, log: bool, verbose: bool, polling_interval: int,
